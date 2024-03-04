@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxista</title>
+</head>
+
+<body>
+    <h1>Calculadora Taxi</h1>
+
+    Insira o nome do passageiro:
+    <br>
+    <input id="input_passageiro">
+    <br>
+
+    Insira a distância em KM do local atual até o destino:
+    <br>
+    <input id="input_distancia_passg">
+    <br>
+
+    Insira a bandeira da corrida (1,2,3):
+    <br>
+    <input id="input_bandeira">
+    <br>
+
+    Insira o horário da corrida, somente horas inteiras:
+    <br>
+    <input id="input_horarios">
+
+    <br>
+    <br>
+
+    <button onclick="calcCorrida()">Calcular Corrida</button>
+
+
+    <div id="div_resultado_corrida">
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function calcCorrida() {
+        var nome_passageiro = input_passageiro.value
+        var distancia_passageiro = Number(input_distancia_passg.value)
+        var bandeira = Number(input_bandeira.value)
+        var horario_corrida = Number(input_horarios.value)
+        var nominal_corrida = distancia_passageiro * 1.25
+
+        if (bandeira == 1) {
+            if (horario_corrida >= 0) {
+                if (horario_corrida <= 6) {
+
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.05)}`
+                }
+            }
+
+            if (horario_corrida >= 7) {
+                if (horario_corrida <= 12) {
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.10)}`
+                }
+
+            }
+            if (horario_corrida >= 13) {
+                if (horario_corrida <= 23) {
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.15)}`
+                }
+            }
+        }
+
+        if (bandeira == 2) {
+            if (horario_corrida >= 0) {
+                if (horario_corrida <= 6) {
+
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.10)}`
+                }
+            }
+
+            if (horario_corrida >= 7) {
+                if (horario_corrida <= 12) {
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.20)}`
+                }
+
+            }
+            if (horario_corrida >= 13) {
+                if (horario_corrida <= 23) {
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.30)}`
+                }
+            }
+        }
+
+        if (bandeira == 3) {
+            if (horario_corrida >= 0) {
+                if (horario_corrida <= 6) {
+                    
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.15)}`
+                }
+            }
+
+            if (horario_corrida >= 7) { 
+                if (horario_corrida <= 12) {
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.30)}`
+            }
+
+            }
+            if (horario_corrida >= 13) {
+                if (horario_corrida <= 23) {
+                    div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${nominal_corrida + (nominal_corrida * 0.45)}`
+            }
+            }
+        }
+
+
+        `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de Z`
+
+
+
+
+    }
+
+
+
+
+</script>

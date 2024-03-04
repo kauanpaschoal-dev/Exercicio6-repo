@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="card_block">
+
+        <h1 class="card_titulo">Calculadora Taxi</h1>
+        <div class="card_nomePassageiro">
+            Insira o nome do passageiro:
+            <br>
+            <input id="input_passageiro">
+            <br>
+        </div>
+
+        <div class="card_distancia">
+            Insira a distância em KM do local atual até o destino:
+            <br>
+            <input id="input_distancia_passg">
+            <br>
+        </div>
+
+        <div class="card_bandeira">
+            Insira a bandeira da corrida (1,2,3):
+            <br>
+            <input id="input_bandeira">
+            <br>
+        </div>
+
+        <div class="card_horario">
+            Insira o horário da corrida, somente horas inteiras:
+            <br>
+            <input id="input_horarios">
+        </div>
+
+        <br>
+        <br>
+        <div class="card_botao">
+            <button onclick="calcCorrida()">Calcular Corrida</button>
+        </div>
+
+
+    </div>
+    <div id="div_resultado_corrida">
+    </div>
+
+</body>
+
+</html>
+
+<div class="card_script">
+
+    <script>
+        function calcCorrida() {
+            var nome_passageiro = input_passageiro.value
+            var distancia_passageiro = Number(input_distancia_passg.value)
+            var bandeira = Number(input_bandeira.value)
+            var horario_corrida = Number(input_horarios.value)
+            var nominal_corrida = distancia_passageiro * 1.25
+
+
+
+            if (horario_corrida >= 0) {
+                var bandeira1 = (bandeira * 5)
+                var percBandeira1 = bandeira1 / 100
+                var porcentagem1 = nominal_corrida * percBandeira1
+                var total1 = nominal_corrida + porcentagem1
+
+                div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${total1}`
+            }
+
+
+
+            if (horario_corrida >=7) {
+                var bandeira2 = (bandeira * 10)
+                var percBandeira2 = bandeira2 / 100
+                var porcentagem2 = nominal_corrida * percBandeira2
+                var total2 = nominal_corrida + porcentagem3
+
+                div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${total2}`
+            }
+
+            if (horario_corrida >= 13) {
+                var bandeira3 = (bandeira * 15)
+                var percBandeira3 = bandeira3 / 100
+                var porcentagem3 = nominal_corrida * percBandeira3
+                var total3 = nominal_corrida + porcentagem3
+
+                div_resultado_corrida.innerHTML = `Olá ${nome_passageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia_passageiro} km e o total da corrida será de ${total3}`
+            }
+
+
+
+
+        }
+    </script>
+</div>

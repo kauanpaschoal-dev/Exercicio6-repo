@@ -1,0 +1,50 @@
+.card_block {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card_titulo {
+    text-align: center;
+
+}
+
+.card_nomePassageiro {
+    text-align: center;
+
+
+}
+
+.card_distancia {
+    text-align: center;
+
+
+}
+
+.card_bandeira {
+    text-align: center;
+
+
+}
+
+.card_horario {
+    text-align: center;
+
+
+
+}
+
+
+.card_botao {
+    text-align: center;
+
+
+
+}
+
+.card_script{
+
+    text-align: center;
+}
